@@ -1,0 +1,129 @@
+body
+{
+    background: blueviolet ;
+}
+#header
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url(data/background.png);/*modifier fond */
+    background-size: cover;
+    background-position: center;
+}
+.container
+{
+    padding: 30px 10% ;/*marge*/
+}
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li
+{
+    display: inline-block; /*en ligne*/
+    list-style: none;
+    margin: 10px 20px;
+
+
+}
+nav ul li a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after/*permet de souligner apres avoir mis notre souris sur le lien*/
+{
+    content: ''; /*aucune idee*/
+    width: 0;
+    height: 3px;
+    background: purple;/*couleur de la ligne*/
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;/*animation*/
+}
+
+nav ul li a:hover::after /*permet de souligner apres et pendant avoir mis notre souris sur le lien*/
+{
+
+    width: 100%;
+
+}
+.header-text
+{
+    margin-top: 20%;
+    font-size: 55px;
+}
+.header-text h1 /*H1 du header-text*/
+{
+    margin-top: 0%;
+    font-size: 20px;
+}
+.header-text h1 span 
+{
+    color: red;
+}
+
+
+#About
+{
+    padding: 80px 0;
+    color: gray;
+
+}
+.row
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col1
+{
+    flex-basis: 35%;
+}
+.about-col2
+{
+    flex-basis: 60%;
+}
+.about-col2 h1
+{
+    font-size: 60px;
+    color: white;
+}
+
+.tab-titles
+{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-link
+{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor:pointer;
+    position: relative;
+
+}
+.tab-link::after
+{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-link.active::after
+{
+    width: 50px;
+}
