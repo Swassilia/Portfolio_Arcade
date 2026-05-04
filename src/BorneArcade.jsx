@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei';
 import { VideoTexture, SRGBColorSpace } from 'three';
 
 function BorneArcade({ url }) {
-    const { scene } = useGLTF('/models/Arcade.glb');
+    const { scene } = useGLTF('/models/BorneArcadeV2.glb');
     const videoRef = useRef(null);
 
 useEffect(() => {
@@ -11,6 +11,7 @@ useEffect(() => {
 
         const video = document.createElement('video');
         video.src = url;
+        video.crossOrigin = 'anonymous';
         video.loop = true;
         video.muted = true;
         video.autoplay = true;
@@ -18,7 +19,9 @@ useEffect(() => {
 
         const texture = new VideoTexture(video);
         texture.colorSpace = SRGBColorSpace;
-        // texture.rotation(90);
+        texture.center.set(0.5, 0.5);        
+        texture.rotation = Math.PI/2 ;
+        texture.repeat.set(-1, 1); 
 
         const ecran = scene.getObjectByName('Ecran');
         if (ecran) {
@@ -44,5 +47,5 @@ useEffect(() => {
     return <primitive object={scene} />;
 }
 
-useGLTF.preload('/models/Arcade.glb');
+useGLTF.preload('/models/BorneArcadeV2.glb');
 export default BorneArcade;

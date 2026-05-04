@@ -39,7 +39,7 @@ function Projects() {
                 <button className="cta-btn" onClick={() => handleNavigation('next')}>right</button>
             </div>
             <div className="borne-arcade">
-                <Canvas camera={{ position: [0, 2, 6] }}>
+                <Canvas camera={{ position: [0, 1, 0] }} >
                     <ambientLight intensity={1} />
                     <directionalLight position={[10, 10, 5]} />
                     <BorneArcade url = {currentProjet.Video}/>
