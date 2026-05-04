@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { HashRouter, Routes, Route} from "react-router-dom";
 import Home     from "./pages/Home";
 import Resume   from "./pages/Resume";
 import Projects from "./pages/Projects";
@@ -12,7 +12,7 @@ import Navbar from './sections/Navbar';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />        
@@ -20,7 +20,7 @@ function App() {
         <Route path="/resume" element={<Resume/>} />
         {/* <Route path="/arcade"  element={<Arcade/>} /> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

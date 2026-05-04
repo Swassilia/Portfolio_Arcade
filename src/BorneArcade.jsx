@@ -3,7 +3,9 @@ import { useGLTF } from '@react-three/drei';
 import { VideoTexture, SRGBColorSpace } from 'three';
 
 function BorneArcade({ url }) {
-    const { scene } = useGLTF('/models/BorneArcadeV2.glb');
+    const base = import.meta.env.BASE_URL;
+    const { scene } = useGLTF(`${base}models/BorneArcadeV2.glb`);
+    useGLTF.preload(`${base}models/BorneArcadeV2.glb`);
     const videoRef = useRef(null);
 
 useEffect(() => {
@@ -47,5 +49,5 @@ useEffect(() => {
     return <primitive object={scene} />;
 }
 
-useGLTF.preload('/models/BorneArcadeV2.glb');
+useGLTF.preload('.models/BorneArcadeV2.glb');
 export default BorneArcade;
