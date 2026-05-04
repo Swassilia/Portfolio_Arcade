@@ -398,3 +398,18 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+# dépendances
+node_modules/
+
+# build
+dist/
+
+# variables d'environnement
+.env
+.env.local
+
+# vidéos lourdes (si besoin)
+public/videos/
+
+# logs
+*.log
