@@ -1,13 +1,11 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+
 
 
 function Home() {
   const navigate = useNavigate();
   const starsRef = useRef(null);
-
   useEffect(() => {
     const container = starsRef.current;
     if (!container) return;
@@ -36,7 +34,6 @@ function Home() {
         WASSILA SAID KARIM
       </h1>
 
-      {/* <p className="hero-sub">FULLSTACK · R3F · CREATIVE</p> */}
 
       <p className="typewriter">&gt; Bienvenue dans mon arcade_</p>
 
@@ -45,19 +42,13 @@ function Home() {
         className="cta-btn"
         onClick={() => navigate("/projects")}
       >
-        ▶ PRESS START
-      </button>
-      <button
-        className="cta-btn"
-        onClick={() => navigate("/resume")}
-      >
-        ▶ PRESS TO LEARN
-      </button>
-      <button
-        className="cta-btn"
-        onClick={() => navigate("/arcade")}
-      >
         ▶ PRESS TO PLAY
+      </button>
+      <button
+        className="cta-btn"
+        onClick={() => navigate("/about")}
+      >
+        ▶ PRESS TO DISCOVER
       </button>
 </div>
       

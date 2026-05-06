@@ -26,11 +26,9 @@ function Navbar() {
 
     return (
         <header className="navbar">
-            <a href="/" className="logo">Wassila</a>
-
+            <a href="/" className="logo">Wassila <br/><br/> SAID KARIM</a>
             <nav>
                 <NavItems />
-                {/* <button className="insert-coin">INSERT COIN</button> */}
             </nav>
 
         </header>
