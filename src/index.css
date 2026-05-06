@@ -411,3 +411,7 @@ body::before {
     0 0 60px rgba(0,245,255,0.2);
   animation: fadein 0.7s ease, titleglow 3s ease-in-out infinite;
 }
+
+.Canva_Borne{
+ max_width : 50%;
+}
