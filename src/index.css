@@ -157,10 +157,9 @@ body::before {
   letter-spacing: 3px;
   z-index: 2;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  /* ❌ supprime l'animation ici */
 }
 
-/* ✅ animation uniquement quand pas en hover */
+
 .cta-btn:not(:hover) {
   animation: blink-btn 2s step-end infinite;
 }
@@ -357,6 +356,7 @@ body::before {
   flex: 1;
   display: flex;
   justify-content: center;
+max_width: 70%;
 }
 
 .borne-arcade {
