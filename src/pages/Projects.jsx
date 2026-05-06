@@ -81,7 +81,7 @@ function Projects() {
 
                 <div className="projects-right">
                     <div className="borne-arcade">
-                        <Canvas camera={{ position: [2, 0, 0] }} className="Canva_Borne">
+                        <Canvas camera={{ position: [1.2, 0, 0] }} className="Canva_Borne">
                             <ambientLight intensity={1} />
                             <directionalLight position={[50, 0, 10]} />
                             <BorneArcade url={currentProjet.Video} />
